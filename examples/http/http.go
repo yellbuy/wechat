@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/silenceper/wechat"
+	"github.com/yellbuy/wechat"
 	"github.com/yellbuy/wechat/message"
 )
 
