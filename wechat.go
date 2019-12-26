@@ -15,6 +15,7 @@ import (
 	"github.com/yellbuy/wechat/oauth"
 	"github.com/yellbuy/wechat/pay"
 	"github.com/yellbuy/wechat/qr"
+	"github.com/yellbuy/wechat/security"
 	"github.com/yellbuy/wechat/server"
 	"github.com/yellbuy/wechat/tcb"
 	"github.com/yellbuy/wechat/user"
@@ -87,6 +88,11 @@ func (wc *Wechat) GetJs() *js.Js {
 // GetMenu 菜单管理接口
 func (wc *Wechat) GetMenu() *menu.Menu {
 	return menu.NewMenu(wc.Context)
+}
+
+// 内容安全审核接口
+func (wc *Wechat) GetContent() *security.Content {
+	return security.NewContent(wc.Context)
 }
 
 // GetUser 用户管理接口

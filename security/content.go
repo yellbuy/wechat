@@ -75,7 +75,7 @@ func (content *Content) MediaCheckAsync(mediaUrl string, mediaType uint8) (resMe
 		return
 	}
 
-	uri := fmt.Sprintf("%s?access_token=%s", imgSecCheckURL)
+	uri := fmt.Sprintf("%s?access_token=%s", imgSecCheckURL, accessToken)
 	var req struct {
 		MediaUrl  string `json:"mediaUrl"`
 		MediaType uint8  `json:"mediaType"`
