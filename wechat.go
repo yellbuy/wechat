@@ -13,6 +13,7 @@ import (
 	"github.com/yellbuy/wechat/message"
 	"github.com/yellbuy/wechat/miniprogram"
 	"github.com/yellbuy/wechat/oauth"
+	"github.com/yellbuy/wechat/ocr"
 	"github.com/yellbuy/wechat/pay"
 	"github.com/yellbuy/wechat/qr"
 	"github.com/yellbuy/wechat/security"
@@ -88,6 +89,11 @@ func (wc *Wechat) GetJs() *js.Js {
 // GetMenu 菜单管理接口
 func (wc *Wechat) GetMenu() *menu.Menu {
 	return menu.NewMenu(wc.Context)
+}
+
+// 身份证OCR识别接口
+func (wc *Wechat) GetIdCard() *ocr.IdCard {
+	return ocr.NewIdCard(wc.Context)
 }
 
 // 内容安全审核接口
